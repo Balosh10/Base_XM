@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App_Base_XF.Bases.CustomRender"
+             x:Class="App_Base_XF.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorPrimary">#424242</Color>
+            <Color x:Key="ColorPrimaryDark">#1b1b1b</Color>
+            <Color x:Key="ColorAccent">#ffffff</Color>
+            <Color x:Key="TituloTextColor">#575757</Color>
+            <Color x:Key="SubTituloTextColor">#878787</Color>
+            <Style x:Key="stFontSizeScale" TargetType="controls:CustomEntryControl">
+                <Setter Property="FontSizeScaled">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                iOS="3.1"
+                                Android="2.5"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
