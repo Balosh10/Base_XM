@@ -14,8 +14,8 @@ namespace App_Base_XF
         public App()
         {
             InitializeComponent();
-            LoginViewModel loginViewModel = new LoginViewModel();
-            var loginPage = new LoginPage();
+            MovieViewModel loginViewModel = new MovieViewModel();
+            var loginPage = new MoviePage();
             loginPage.BindingContext = loginViewModel;
             MainPage = loginPage;
         }

@@ -142,6 +142,14 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\favorite_second.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\favorite.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\favorite.imageset\favorite.png" />
+    <ImageAsset Include="Assets.xcassets\favorite.imageset\favorite%402x.png" />
+    <ImageAsset Include="Assets.xcassets\favorite.imageset\favorite%403x.png" />
+    <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second.png" />
+    <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second%402x.png" />
+    <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -150,13 +158,17 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\App_Base_XF\App_Base_XF.csproj">
-      <Project>{CC2E7009-FA89-4C9A-AE82-5DC9C47BA97B}</Project>
+      <Project>{2C489211-C965-4FC7-85F4-AAF1C18B301A}</Project>
       <Name>App_Base_XF</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\favorite_second.imageset\" />
+    <Folder Include="Assets.xcassets\favorite.imageset\" />
   </ItemGroup>
 </Project>

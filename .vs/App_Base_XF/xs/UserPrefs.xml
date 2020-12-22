@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{AB4C7ECA-F9CC-4140-9B69-7CD3B0E046DB}|Default">
+  <MonoDevelop.Ide.ItemProperties.App__Base__XF.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.83284f3b" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="App_Base_XF/App_Base_XF/Model/MoviePopular.cs">
+    <Files>
+      <File FileName="App_Base_XF/App_Base_XF/Pages/PeliculasPage/MoviePage.xaml" Line="321" Column="89" />
+      <File FileName="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" Line="72" Column="64" />
+      <File FileName="App_Base_XF/App_Base_XF/Services/ApiService.cs" Line="15" Column="87" />
+      <File FileName="App_Base_XF/App_Base_XF/Model/MoviewTopRated.cs" Line="27" Column="32" />
+      <File FileName="App_Base_XF/App_Base_XF/Model/MovieComming.cs" Line="31" Column="31" />
+      <File FileName="App_Base_XF/App_Base_XF/Model/MoviePopular.cs" Line="30" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="App_Base_XF" expanded="True">
+            <Node name="App_Base_XF" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="MoviePopular.cs" selected="True" />
+              </Node>
+              <Node name="Pages" expanded="True">
+                <Node name="PeliculasPage" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="MovieViewModel" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
