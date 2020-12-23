@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App_Base_XF.Bases.CustomRender"
+             xmlns:local="clr-namespace:App_Base_XF.Bases.CustomRender"
+             x:Class="App_Base_XF.MoviePage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.25*"/>
+                    <RowDefinition Height="0.75*"/>
+                </Grid.RowDefinitions>
+                <AbsoluteLayout Grid.Row="0"
+                                BackgroundColor="Transparent"
+                                AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                >
+                    <local:GradientColor StarColor="#0094ff" EndColor="#00d1ff"
+                                         AbsoluteLayout.LayoutFlags="All"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1">
+                          <Grid AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                BackgroundColor="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.40*"/>
+                                <RowDefinition Height="0.15*"/>
+                            </Grid.RowDefinitions>
+                            <AbsoluteLayout Grid.Row="0"
+                                            BackgroundColor="Transparent">
+                                    <StackLayout AbsoluteLayout.LayoutFlags="All"
+                                                AbsoluteLayout.LayoutBounds="0.5,0,0.7,1">
+                                        <Label Text="{Binding Title_View}"
+                                               TextColor="White"
+                                               Font="30"
+                                               HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="CenterAndExpand"
+                                               HorizontalTextAlignment="Start"/>
+                                    </StackLayout>
+                            </AbsoluteLayout>
+                            <AbsoluteLayout Grid.Row="1"
+                                            BackgroundColor="Transparent">
+                                <Frame
+                                    CornerRadius="{OnPlatform 12, UWP=1}"
+                                    BackgroundColor="#86C0E2"
+                                    HasShadow="False"
+                                    IsClippedToBounds="True"
+                                    Margin="0"
+                                    Padding="0"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    AbsoluteLayout.LayoutBounds="0.5,0,0.7,1"
+                                    >
+                                    <Frame.Content>
+                                        <Grid AbsoluteLayout.LayoutFlags="All"
+                                              AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.20*"/>
+                                                <ColumnDefinition Width="0.80*"/>
+                                                <ColumnDefinition Width="0.20*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <AbsoluteLayout Grid.Column="0">
+                                                <StackLayout HorizontalOptions="CenterAndExpand"
+                                                             VerticalOptions="CenterAndExpand"
+                                                             BackgroundColor="Transparent"
+                                                             AbsoluteLayout.LayoutFlags="All"
+                                                             AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+                                                    <Image Source="ic_search.png"
+                                                           Aspect="AspectFit"
+                                                           HeightRequest="28"
+                                                           WidthRequest="28"
+                                                           />
+                                                </StackLayout>
+                                            </AbsoluteLayout>
+                                            <AbsoluteLayout Grid.Column="1"
+                                                            AbsoluteLayout.LayoutFlags="All"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                                                <controls:CustomEntryControl AbsoluteLayout.LayoutFlags="All"
+                                                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                                         Placeholder="Buscar"
+                                                                         PlaceholderColor="White"
+                                                                         TextColor="White"
+                                                                         IsTextPredictionEnabled="False"
+                                                                         TextChanged="CustomEntryControl_TextChanged"
+                                                                         HasBorder="False"
+                                                                         Text="{Binding SearchText}"/>
+
+                                            </AbsoluteLayout>
+                                            <AbsoluteLayout Grid.Column="2"
+                                                            HorizontalOptions="CenterAndExpand"
+                                                            VerticalOptions="CenterAndExpand"
+                                                            BackgroundColor="Transparent"
+                                                            AbsoluteLayout.LayoutFlags="All"
+                                                            AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+
+                                                <Image Source="ic_clear.png"
+                                                       Aspect="AspectFit"
+                                                       IsVisible="{Binding IsVisible}"
+                                                       HeightRequest="28"
+                                                       WidthRequest="28">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding TapImageCommand}" CommandParameter="{Binding .}" />
+                                                     </Image.GestureRecognizers>
+                                                </Image>
+
+                                            </AbsoluteLayout>
+                                        </Grid>
+                                    </Frame.Content>
+                                </Frame>
+                            </AbsoluteLayout>
+                        </Grid>
+                    </local:GradientColor>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="1">
+                    <Frame  BackgroundColor="#263648"
+                            CornerRadius="24"
+                            Padding="0"
+                            Margin="0,0,0,-28"
+                            HasShadow="True"
+                            IsClippedToBounds="True"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="0.5,0,1,1">
+                        <ScrollView Margin="0,0,0,38">
+                             <StackLayout Margin="7,20,7,50">
+                                    <StackLayout HeightRequest="20"
+                                                 Padding="18"
+                                                 Margin="0">
+                                        <Label Text="{Binding Title_1}"
+                                               TextColor="White"
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand"
+                                               HorizontalTextAlignment="Start"
+                                               Font="16"/>
+                                    </StackLayout>
+                                    <CollectionView SelectionMode="Single"
+                                                    ItemsSource="{Binding LtsTopRated}"
+                                                    HeightRequest="{Binding HeightViewTopRated}"
+                                                    SelectedItem="{Binding SelectItemTopRated, Mode=TwoWay}"
+                                                    SelectionChangedCommand="{Binding ItemSelectedTopRatedCommand}"
+                                                    >
+                                            <CollectionView.ItemsLayout>
+                                               <GridItemsLayout Orientation="Horizontal"
+                                                                Span="1" />
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid Padding="10">
+                                                        <VisualStateManager.VisualStateGroups>
+					                                        <VisualStateGroup Name="CommonStates">
+						                                        <VisualState Name="Normal" >
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+						                                        <VisualState Name="Selected">
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+					                                        </VisualStateGroup>
+				                                        </VisualStateManager.VisualStateGroups>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="199" />
+                                                            <RowDefinition Height="20" />
+                                                            <RowDefinition Height="30" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="133" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Frame Grid.Row="0"
+                                                               BackgroundColor="White"
+                                                               CornerRadius="24"
+                                                               Padding="0"
+                                                               Margin="0"
+                                                               HasShadow="True"
+                                                               IsClippedToBounds="True"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Image 
+                                                               Source="{Binding poster_path}"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                               BackgroundColor="Transparent"/>
+                                                        </Frame>
+                                                        <Label Grid.Row="1"
+                                                               Text="{Binding title}"
+                                                               TextColor="White"
+                                                               FontAttributes="Bold"
+                                                               LineBreakMode="TailTruncation"
+                                                               BackgroundColor="Transparent"/>
+                                                        <Grid Grid.Row="2"
+                                                              AbsoluteLayout.LayoutFlags="All"
+                                                              AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="15"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Image
+                                                               Grid.Column="0"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite1}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite1}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="1"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite2}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite2}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="2"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite3}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite3}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="3"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite4}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite4}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="4"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite5}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite5}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                        </Grid>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                    <StackLayout HeightRequest="20"
+                                                 Padding="18"
+                                                 Margin="0">
+                                        <Label Text="{Binding Title_2}"
+                                               TextColor="White"
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand"
+                                               HorizontalTextAlignment="Start"
+                                               Font="16"/>
+                                    </StackLayout>
+                                    <CollectionView SelectionMode="Single"
+                                                    ItemsSource="{Binding LtsUpComming}"
+                                                    HeightRequest="{Binding HeightViewUpComming}"
+                                                    SelectedItem="{Binding SelectItemUpComing, Mode=TwoWay}"
+                                                    SelectionChangedCommand="{Binding ItemSelectedUpComingCommand}"
+                                                    >
+                                            <CollectionView.ItemsLayout>
+                                               <GridItemsLayout Orientation="Horizontal"
+                                                                Span="1" />
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid Padding="10">
+                                                        <VisualStateManager.VisualStateGroups>
+					                                        <VisualStateGroup Name="CommonStates">
+						                                        <VisualState Name="Normal" >
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+						                                        <VisualState Name="Selected">
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+					                                        </VisualStateGroup>
+				                                        </VisualStateManager.VisualStateGroups>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="199" />
+                                                            <RowDefinition Height="20" />
+                                                            <RowDefinition Height="30" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="133" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Frame Grid.Row="0"
+                                                               BackgroundColor="White"
+                                                               CornerRadius="24"
+                                                               Padding="0"
+                                                               Margin="0"
+                                                               HasShadow="True"
+                                                               IsClippedToBounds="True"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Image 
+                                                               Source="{Binding poster_path}"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                               BackgroundColor="Transparent"/>
+                                                        </Frame>
+                                                        <Label Grid.Row="1"
+                                                               Text="{Binding title}"
+                                                               TextColor="White"
+                                                               FontAttributes="Bold"
+                                                               LineBreakMode="TailTruncation"
+                                                               BackgroundColor="Transparent"/>
+                                                        <Grid Grid.Row="2"
+                                                              AbsoluteLayout.LayoutFlags="All"
+                                                              AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="15"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Image
+                                                               Grid.Column="0"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite1}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite1}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="1"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite2}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite2}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="2"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite3}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite3}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="3"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite4}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite4}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="4"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite5}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite5}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                        </Grid>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    <StackLayout HeightRequest="20"
+                                                 Padding="18"
+                                                 Margin="0">
+                                        <Label Text="{Binding Title_3}"
+                                               TextColor="White"
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand"
+                                               HorizontalTextAlignment="Start"
+                                               Font="16"/>
+                                    </StackLayout>
+                                    <CollectionView SelectionMode="Single"
+                                                    ItemsSource="{Binding LtsPopular}"
+                                                    HeightRequest="{Binding HeightViewPopular}"
+                                                    SelectedItem="{Binding SelectItemPopular, Mode=TwoWay}"
+                                                    SelectionChangedCommand="{Binding ItemSelectedPopularCommand}">
+                                            <CollectionView.ItemsLayout>
+                                               <GridItemsLayout Orientation="Horizontal"
+                                                                Span="1" />
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid Padding="10">
+                                                        <VisualStateManager.VisualStateGroups>
+					                                        <VisualStateGroup Name="CommonStates">
+						                                        <VisualState Name="Normal" >
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+						                                        <VisualState Name="Selected">
+							                                        <VisualState.Setters>
+								                                        <Setter Property="BackgroundColor" Value="#263648" />
+							                                        </VisualState.Setters>
+						                                        </VisualState>
+					                                        </VisualStateGroup>
+				                                        </VisualStateManager.VisualStateGroups>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="199" />
+                                                            <RowDefinition Height="20" />
+                                                            <RowDefinition Height="30" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="133" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Frame Grid.Row="0"
+                                                               BackgroundColor="White"
+                                                               CornerRadius="24"
+                                                               Padding="0"
+                                                               Margin="0"
+                                                               HasShadow="True"
+                                                               IsClippedToBounds="True"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Image 
+                                                               Source="{Binding poster_path}"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               AbsoluteLayout.LayoutFlags="All"
+                                                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                               BackgroundColor="Transparent"/>
+                                                        </Frame>
+                                                        <Label Grid.Row="1"
+                                                               Text="{Binding title}"
+                                                               TextColor="White"
+                                                               FontAttributes="Bold"
+                                                               LineBreakMode="TailTruncation"
+                                                               BackgroundColor="Transparent"/>
+                                                        <Grid Grid.Row="2"
+                                                              AbsoluteLayout.LayoutFlags="All"
+                                                              AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="15"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                                 <ColumnDefinition Width="15" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Image
+                                                               Grid.Column="0"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite1}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite1}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="1"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                               <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite1}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite1}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="2"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite3}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite3}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="3"
+                                                               Source="favorite_second.png"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite4}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite4}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                            <Image
+                                                               Grid.Column="4"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Margin="0">
+                                                                 <Image.Triggers>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                 Binding="{Binding favorite5}"
+                                                                                 Value="True">
+                                                                        <Setter Property="Source" Value="favorite.png" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Image"
+                                                                                    Binding="{Binding favorite5}"
+                                                                                    Value="False">
+                                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                                    </DataTrigger>
+                                                                 </Image.Triggers>
+                                                            </Image>
+                                                        </Grid>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    <ActivityIndicator
+                                                IsVisible="{Binding IsBusy}"
+                                                IsRunning="{Binding IsBusy}"
+                                                Color="{StaticResource AccentColor}"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                             </StackLayout>
+                        </ScrollView> 
+                    </Frame>
+                </AbsoluteLayout>
+            </Grid>            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

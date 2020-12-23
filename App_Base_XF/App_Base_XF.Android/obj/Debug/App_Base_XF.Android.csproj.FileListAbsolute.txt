@@ -463,3 +463,7 @@
 /Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
 /Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/favorite_second.png
 /Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/favorite.png
+/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/ic_search.png
+/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/ic_clear.png
+/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/ic_like.png
+/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF.Android/obj/Debug/res/drawable-xxxhdpi/ic_back.png

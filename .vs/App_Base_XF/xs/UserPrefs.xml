@@ -1,39 +1,50 @@
 ﻿<Properties StartupConfiguration="{AB4C7ECA-F9CC-4140-9B69-7CD3B0E046DB}|Default">
   <MonoDevelop.Ide.ItemProperties.App__Base__XF.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.83284f3b" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="App_Base_XF/App_Base_XF/Model/MoviePopular.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs">
     <Files>
-      <File FileName="App_Base_XF/App_Base_XF/Pages/PeliculasPage/MoviePage.xaml" Line="321" Column="89" />
-      <File FileName="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" Line="72" Column="64" />
-      <File FileName="App_Base_XF/App_Base_XF/Services/ApiService.cs" Line="15" Column="87" />
-      <File FileName="App_Base_XF/App_Base_XF/Model/MoviewTopRated.cs" Line="27" Column="32" />
-      <File FileName="App_Base_XF/App_Base_XF/Model/MovieComming.cs" Line="31" Column="31" />
-      <File FileName="App_Base_XF/App_Base_XF/Model/MoviePopular.cs" Line="30" Column="30" />
+      <File FileName="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" Line="82" Column="1" />
+      <File FileName="App_Base_XF/App_Base_XF/Bases/Model/ModelBase.cs" Line="18" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="App_Base_XF" expanded="True">
             <Node name="App_Base_XF" expanded="True">
-              <Node name="Model" expanded="True">
-                <Node name="MoviePopular.cs" selected="True" />
+              <Node name="Bases" expanded="True">
+                <Node name="Model" expanded="True" />
               </Node>
-              <Node name="Pages" expanded="True">
-                <Node name="PeliculasPage" expanded="True" />
-              </Node>
+              <Node name="Model" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModel" expanded="True">
-                <Node name="MovieViewModel" expanded="True" />
+                <Node name="MovieViewModel" expanded="True">
+                  <Node name="MoviewViewModel.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="MoviePage" expanded="True">
+                  <Node name="MoviePage.xaml" expanded="True" />
+                </Node>
               </Node>
             </Node>
+            <Node name="App_Base_XF.Android" expanded="True">
+              <Node name="CustomRender" expanded="True" />
+            </Node>
+            <Node name="App_Base_XF.iOS" expanded="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" relfile="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" line="148" column="1" />
+      <Breakpoint file="/Users/idscomercial/Documents/TotalTec/Base_XM/App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" relfile="App_Base_XF/App_Base_XF/ViewModel/MovieViewModel/MoviewViewModel.cs" line="82" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

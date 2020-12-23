@@ -26,6 +26,11 @@ namespace App_Base_XF.Model
         public bool video { get; set; }
         public double vote_average { get; set; }
         public int vote_count { get; set; }
+        public bool favorite1 { get; set; }
+        public bool favorite2 { get; set; }
+        public bool favorite3 { get; set; }
+        public bool favorite4 { get; set; }
+        public bool favorite5 { get; set; }
     }
 
     public class MovieUpComing

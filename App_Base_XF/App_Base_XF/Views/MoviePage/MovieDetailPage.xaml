@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App_Base_XF.Bases.CustomRender"
+             xmlns:local="clr-namespace:App_Base_XF.Bases.CustomRender"
+             x:Class="App_Base_XF.Views.MoviePage.MovieDetailPage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <Frame  BackgroundColor="#263648"
+                    Padding="0"
+                    Margin="0"
+                    HasShadow="True"
+                    IsClippedToBounds="True"
+                    AbsoluteLayout.LayoutFlags="All"
+                    AbsoluteLayout.LayoutBounds="0.5,0,1,1">
+                    <Grid AbsoluteLayout.LayoutFlags="All"
+                          AbsoluteLayout.LayoutBounds="0,0,1,1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.50*"/>
+                            <RowDefinition Height="0.50*"/>
+                        </Grid.RowDefinitions>
+                        <AbsoluteLayout Grid.Row="0"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        BackgroundColor="Transparent">
+                            <Frame  BackgroundColor="#263648"
+                                    CornerRadius="30"
+                                    Padding="0"
+                                    Margin="-5,-20,-5,0"
+                                    HasShadow="True"
+                                    IsClippedToBounds="True"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    AbsoluteLayout.LayoutBounds="0.5,0,1,1">
+                                <Image Source="{Binding SelectItemMovie.poster_path}"
+                                       Aspect="AspectFill"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"/>
+                            </Frame>
+                            <Grid AbsoluteLayout.LayoutFlags="All"
+                                  AbsoluteLayout.LayoutBounds="0,0,1,0.20"
+                                  HeightRequest="44">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.6*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout
+                                             Grid.Column="0"
+                                             BackgroundColor="Transparent">
+                                    <Image Source="ic_back.png"
+                                           Aspect="AspectFit"
+                                           HeightRequest="28"
+                                           WidthRequest="28"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand">
+                                        <Image.GestureRecognizers>
+                                              <TapGestureRecognizer Command="{Binding TapBackCommand}"
+                                                                    CommandParameter="{Binding .}" />
+                                         </Image.GestureRecognizers>
+                                      </Image>
+                                </StackLayout>
+                                <StackLayout
+                                             Grid.Column="2"
+                                             BackgroundColor="Transparent">
+                                    <Image Source="ic_like.png"
+                                           Aspect="AspectFit"
+                                           HeightRequest="28"
+                                           WidthRequest="28"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </Grid>
+                            
+                        </AbsoluteLayout>
+                        <AbsoluteLayout Grid.Row="1"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        BackgroundColor="Transparent">
+                            <ScrollView AbsoluteLayout.LayoutFlags="All"
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1">                          
+                                <StackLayout HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                                    <Grid AbsoluteLayout.LayoutFlags="All"
+                                          AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.50*"/>
+                                            <ColumnDefinition Width="0.50*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="80"/>
+                                            <RowDefinition Height="130"/>
+                                            <RowDefinition Height="130"/>
+                                            <RowDefinition Height="180"/>
+                                        </Grid.RowDefinitions>
+                                        <AbsoluteLayout Grid.Row="0"
+                                                        Grid.Column="0">
+                                            <Label Text="{Binding SelectItemMovie.title}"
+                                                   Font="28"
+                                                   TextColor="White"
+                                                   Padding="24,16,0,0"
+                                                   />
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="0"
+                                                        Grid.Column="1"
+                                                        HorizontalOptions="EndAndExpand"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        Padding="0,16,24,0">
+                                            <Image Source="ic_like.png"
+                                                   Aspect="AspectFit"
+                                                   HeightRequest="28"
+                                                   WidthRequest="28"
+                                                   HorizontalOptions="EndAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="1"
+                                                        Grid.Column="0"
+                                                        Padding="20"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        VerticalOptions="CenterAndExpand">
+                                            <Frame  BackgroundColor="#6B7480"
+                                                    CornerRadius="30"
+                                                    Padding="0"
+                                                    Margin="0"
+                                                    HasShadow="True"
+                                                    IsClippedToBounds="True">
+                                                <Frame.Content>
+                                                    <Label Text="WATCH NOW"
+                                                           Font="18"
+                                                           TextColor="White"
+                                                           Padding="8"
+                                                           />
+                                                </Frame.Content>
+                                            </Frame>
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="1"
+                                                        Grid.Column="1"
+                                                        HorizontalOptions="EndAndExpand"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        Padding="0,16,24,0">
+                                            <Grid 
+                                                AbsoluteLayout.LayoutFlags="All"
+                                                AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="15"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="15" />
+                                                    <ColumnDefinition Width="15" />
+                                                    <ColumnDefinition Width="15" />
+                                                    <ColumnDefinition Width="15" />
+                                                    <ColumnDefinition Width="15" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image
+                                                Grid.Column="0"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                Margin="0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite1}"
+                                                                    Value="True">
+                                                        <Setter Property="Source" Value="favorite.png" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite1}"
+                                                                    Value="False">
+                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                    </DataTrigger>
+                                                    </Image.Triggers>
+                                            </Image>
+                                            <Image
+                                                Grid.Column="1"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                Margin="0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite2}"
+                                                                    Value="True">
+                                                        <Setter Property="Source" Value="favorite.png" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite2}"
+                                                                    Value="False">
+                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                    </DataTrigger>
+                                                    </Image.Triggers>
+                                            </Image>
+                                            <Image
+                                                Grid.Column="2"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                Margin="0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite3}"
+                                                                    Value="True">
+                                                        <Setter Property="Source" Value="favorite.png" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite3}"
+                                                                    Value="False">
+                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                    </DataTrigger>
+                                                    </Image.Triggers>
+                                            </Image>
+                                            <Image
+                                                Grid.Column="3"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                Margin="0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite4}"
+                                                                    Value="True">
+                                                        <Setter Property="Source" Value="favorite.png" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite4}"
+                                                                    Value="False">
+                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                    </DataTrigger>
+                                                    </Image.Triggers>
+                                            </Image>
+                                            <Image
+                                                Grid.Column="4"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                Margin="0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite5}"
+                                                                    Value="True">
+                                                        <Setter Property="Source" Value="favorite.png" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Image"
+                                                                    Binding="{Binding SelectItemMovie.favorite5}"
+                                                                    Value="False">
+                                                        <Setter Property="Source" Value="favorite_second.png" />
+                                                    </DataTrigger>
+                                                    </Image.Triggers>
+                                            </Image>
+                                        </Grid>
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="2"
+                                                        Grid.ColumnSpan="2">
+                                            <Label Text="{Binding SelectItemMovie.overview}"
+                                                   Font="14"
+                                                   TextColor="Gray"
+                                                   Padding="16"
+                                                   MaxLines="100"
+                                                   LineBreakMode="WordWrap"
+                                                   />
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="3"
+                                                        Grid.ColumnSpan="2"
+                                                        BackgroundColor="Transparent">
+                                            <CollectionView ItemsSource="{Binding LtsCast}"
+                                                            HeightRequest="130">
+                                                    <CollectionView.ItemsLayout>
+                                                       <GridItemsLayout Orientation="Horizontal"
+                                                                        Span="1" />
+                                                    </CollectionView.ItemsLayout>
+                                                    <CollectionView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Grid Padding="10">
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="80" />
+                                                                    <RowDefinition Height="40" />
+                                                                </Grid.RowDefinitions>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="80" />
+                                                                </Grid.ColumnDefinitions>
+                                                                <Frame Grid.Row="0"
+                                                                       BackgroundColor="White"
+                                                                       CornerRadius="40"
+                                                                       HeightRequest="80"
+                                                                       WidthRequest="80"
+                                                                       Padding="0"
+                                                                       Margin="0"
+                                                                       HasShadow="True"
+                                                                       IsClippedToBounds="True"
+                                                                       AbsoluteLayout.LayoutFlags="All"
+                                                                       AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                                                    <Image 
+                                                                       Source="{Binding profile_path}"
+                                                                       Aspect="AspectFill"
+                                                                       HorizontalOptions="FillAndExpand"
+                                                                       VerticalOptions="FillAndExpand"
+                                                                       AbsoluteLayout.LayoutFlags="All"
+                                                                       AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                                       BackgroundColor="Transparent"/>
+                                                                </Frame>
+                                                                <Label Grid.Row="1"
+                                                                       Text="{Binding name}"
+                                                                       TextColor="White"
+                                                                       FontAttributes="Bold"
+                                                                       MaxLines="2"
+                                                                       HorizontalTextAlignment="Center"
+                                                                       LineBreakMode="WordWrap"
+                                                                       BackgroundColor="Transparent"/>
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </CollectionView.ItemTemplate>
+                                                </CollectionView>
+                                        </AbsoluteLayout>
+                                        <AbsoluteLayout Grid.Row="4"
+                                                        Grid.ColumnSpan="2"
+                                                        BackgroundColor="Transparent">
+                                            <Grid AbsoluteLayout.LayoutFlags="All"
+                                                  AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                  Padding="16,16,16,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="40"/>
+                                                    <RowDefinition Height="40"/>
+                                                    <RowDefinition Height="40"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                     <ColumnDefinition Width="80" />
+                                                     <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <AbsoluteLayout Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="Studio"
+                                                           Font="14"
+                                                           VerticalOptions="Center"
+                                                           FontAttributes="Bold"
+                                                           TextColor="White"
+                                                           />
+                                                </AbsoluteLayout>
+                                                <AbsoluteLayout Grid.Row="0"
+                                                                Grid.Column="1"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="{Binding SelectItemMovie.studio}"
+                                                           Font="14"
+                                                           TextColor="Gray"
+                                                           />
+                                                </AbsoluteLayout>
+                                                <AbsoluteLayout Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="Genre"
+                                                           Font="14"
+                                                           FontAttributes="Bold"
+                                                           TextColor="White"
+                                                           />
+                                                </AbsoluteLayout>
+                                                <AbsoluteLayout Grid.Row="1"
+                                                                Grid.Column="1"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="{Binding  SelectItemMovie.genre}"
+                                                           Font="14"
+                                                           TextColor="Gray"
+                                                           />
+                                                </AbsoluteLayout>
+                                                <AbsoluteLayout Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="Release"
+                                                           Font="14"
+                                                           FontAttributes="Bold"
+                                                           TextColor="White"
+                                                           />
+                                                </AbsoluteLayout>
+                                                <AbsoluteLayout Grid.Row="2"
+                                                                Grid.Column="1"
+                                                                HorizontalOptions="StartAndExpand">
+                                                    <Label Text="{Binding SelectItemMovie.release_date}"
+                                                           Font="14"
+                                                           TextColor="Gray"
+                                                           />
+                                                </AbsoluteLayout>
+                                            </Grid>
+                                        </AbsoluteLayout>
+                                    </Grid>
+                                </StackLayout>
+                             </ScrollView>
+                        </AbsoluteLayout>
+                    </Grid>
+            </Frame>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

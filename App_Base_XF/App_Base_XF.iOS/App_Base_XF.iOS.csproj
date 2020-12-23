@@ -150,6 +150,22 @@
     <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second.png" />
     <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second%402x.png" />
     <ImageAsset Include="Assets.xcassets\favorite_second.imageset\favorite_second%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_clear.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_search.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_search.imageset\ic_search.png" />
+    <ImageAsset Include="Assets.xcassets\ic_search.imageset\ic_search%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_search.imageset\ic_search%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_clear.imageset\ic_clear.png" />
+    <ImageAsset Include="Assets.xcassets\ic_clear.imageset\ic_clear%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_clear.imageset\ic_clear%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_like.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_like.imageset\ic_like.png" />
+    <ImageAsset Include="Assets.xcassets\ic_like.imageset\ic_like%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_like.imageset\ic_like%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\ic_back.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\ic_back%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\ic_back%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -170,5 +186,9 @@
   <ItemGroup>
     <Folder Include="Assets.xcassets\favorite_second.imageset\" />
     <Folder Include="Assets.xcassets\favorite.imageset\" />
+    <Folder Include="Assets.xcassets\ic_clear.imageset\" />
+    <Folder Include="Assets.xcassets\ic_search.imageset\" />
+    <Folder Include="Assets.xcassets\ic_like.imageset\" />
+    <Folder Include="Assets.xcassets\ic_back.imageset\" />
   </ItemGroup>
 </Project>

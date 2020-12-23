@@ -16,8 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Popup\" />
     <Folder Include="Model\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Themes\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Views\Templates\" />
   </ItemGroup>
 
   <ItemGroup>
